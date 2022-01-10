@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "587679033946",
+    "firebase_url": "https://umfit-b72d1.firebaseio.com",
+    "project_id": "umfit-b72d1",
+    "storage_bucket": "umfit-b72d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:587679033946:android:1b6c3d77d092e0d2",
+        "android_client_info": {
+          "package_name": "com.healthy.umfit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "587679033946-dvhi6ag9qef19o8jvajhqkss4furtl00.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.healthy.umfit",
+            "certificate_hash": "7b3f11d2a9ba59d1f6df178cce312e3a00bd5da6"
+          }
+        },
+        {
+          "client_id": "587679033946-tn08b36bfp5b91na11lt2ofhbd1sfoot.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHC5YQ6LU8-bOWkjFsIaZjzYABiZkhIUI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "587679033946-tn08b36bfp5b91na11lt2ofhbd1sfoot.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,146 @@
+<resources>
+    <string name="app_name">UMFit</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications" translatable="false">Notifications</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_status">Status</string>
+    <string name="title_workout">Exercise</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="title_activity_login">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email" translatable="false">Email</string>
+    <string name="prompt_email_optional" translatable="false">Email (Optional)</string>
+    <string name="prompt_password">Password</string>
+    <string name="txt_confirm_password">Confirm Password</string>
+    <string name="action_sign_in" translatable="false">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email" translatable="false">This email address is invalid</string>
+    <string name="error_invalid_password">This password is invalid</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."</string>
+    <string name="action_log_out">Log Out</string>
+    <string name="txt_sign_up">Sign Up</string>
+    <string name="txt_sign_up_msg">New to UMFit? Register here</string>
+    <string name="txt_sign_in_msg">Already registered? Login here</string>
+    <string name="txt_username">Username</string>
+    <string name="txt_remember_me">Remember Me</string>
+    <string name="txt_password_hint" translatable="false">Consists of lowercase letters, uppercase letters, numerals, and special characters (@, #, &amp;, etc.)</string>
+    <string name="txt_mobile">Phone number</string>
+    <string name="txt_resend_code">Resend code</string>
+    <string name="txt_send">Send</string>
+    <string name="txt_six_digit_code">6-Digit Code</string>
+    <string name="action_update_huami_token" translatable="false">Update Huami Token</string>
+
+
+    <string name="txt_nickname">Nickname</string>
+    <string name="txt_gender">Gender</string>
+    <string name="txt_date_of_birth">Date of birth</string>
+    <string name="txt_height">Height (cm)</string>
+    <string name="txt_weight">Weight (kg)</string>
+    <string name="txt_user_id">Id: [user_id]</string>
+    <string name="txt_heart_rate_value" translatable="false">Heart rate: [heart_rate] BPM</string>
+    <string name="txt_heart_rate_value2" translatable="false">[heart_rate] BPM</string>
+    <string name="txt_heart_rate_value3" translatable="false">[heart_rate] bpm</string>
+    <string name="txt_workout_description" translatable="false">Workout: [minute]m Burned: [calories] kcal</string>
+    <string name="txt_distance_today_msg">Distance [distance]m</string>
+    <string name="txt_burned_fat_msg" translatable="false">Burned [calories] kcal</string>
+    <string name="txt_activity_goal">Activity goal</string>
+    <string name="txt_set_activity_goals_msg">World Health Organization recommends to exercise for 40 minutes daily (walk ~8000steps)</string>
+    <string name="txt_steps_count">[step] steps</string>
+    <string name="txt_steps">steps</string>
+    <string name="txt_steps2">Steps</string>
+    <string name="txt_behavior_tagging">Behavior tagging</string>
+    <string name="title_activity_goal" translatable="false">GoalActivity</string>
+    <string name="txt_ok">OK</string>\
+
+    <string name="txt_heart_rate">Heart Rate</string>
+    <string name="txt_no_result_found">No record found.</string>
+    <string name="txt_exercise_session_msg">Target ≥ [session_count] times</string>
+    <string name="txt_target_heart_rate_msg">Target: [heart_rate] bpm</string>
+    <string name="txt_maximum_heart_rate_msg">Of [heart_rate] bpm recommended maximum heart rate (bpm)</string>
+    <string name="txt_exercise_duration_per_session_msg">Target: [minute] min</string>
+    <string name="txt_daily_step_count_msg">Target: [step_count] steps</string>
+    <string name="txt_last_updated">Last updated: [date]</string>
+    <string name="txt_minute">[minute] min</string>
+    <string name="txt_version_name">Version Name</string>
+    <string name="txt_version_code">Version Code</string>
+    <string name="txt_distance">Distance (m)</string>
+    <string name="txt_calories">Calories (kcal)</string>
+    <string name="txt_heart_rate_bpm">[heart_rate] bpm</string>
+    <string name="txt_sessions_per_week">[session_count] times</string>
+
+    <!--Notification-->
+    <string name="txt_daily_mission_completed">Daily mission completed!</string>
+    <string name="txt_weekly_mission_completed">Weekly mission completed!</string>
+    <string name="txt_reminder">Reminder!</string>
+    <string name="txt_warning">Warning!</string>
+    <string name="txt_notification_msg1">Well done! You have completed your exercise today. Let\'s live a healthy heart! Let\'s exercise! </string>
+    <string name="txt_notification_msg2">Fantastic! You had completed all the exercises prescribed for you on this week. We are so proud of you. Keep it up!</string>
+    <string name="txt_notification_msg3">Don\'t quit exercise now. I love my self and I want a healthy heart. So come on! Let\'s exercise!</string>
+    <string name="txt_notification_msg4">You had exceed more than your maximum preference of heart rate today. Let\'s exercise safely by following the exercise prescription from the specialist.</string>
+    <string name="txt_notification_sync_data">You have never sync any data . Please sync it via UMFit apps</string>
+    <string name="txt_notification_prescription">You still have an unfinished exercise prescription to execute.</string>
+
+    <!--Error-->
+    <string name="txt_timeout">timeout</string>
+    <string name="txt_internal_server_error">Internal server error</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="login_using_phone_number">LOGIN USING PHONE NUMBER</string>
+    <string name="register_new_account">Register new Account</string>
+    <string name="or_login_in_with_phone_number">OR LOGIN IN WITH PHONE NUMBER</string>
+
+    <!-- Work out-->
+    <string name="txt_type">Type:</string>
+    <string name="txt_average_heart_rate">Average Heart Rate:</string>
+    <string name="txt_sport_duration">Exercise Duration:</string>
+    <string name="txt_date_time">Date/Time:</string>
+
+    <string name="txt_language">Language</string>
+    <string name="txt_input_date">Input Date</string>
+    <string name="txt_male">Male</string>
+    <string name="txt_female">Female</string>
+    <string name="txt_targetWarmUpDuration">[duration] min</string>
+    <string name="txt_targetFirstMainExerciseDuration">[duration] min</string>
+    <string name="txt_targetFirstRestDuration">[duration] min</string>
+    <string name="txt_targetSecondMainExerciseDuration">[duration] min</string>
+    <string name="txt_targetSecondRestDuration">[duration] min</string>
+    <string name="txt_targetCooldownDuration">[duration] min</string>
+    <string name="txt_targetTotalExerciseDuration">[duration] min</string>
+
+    <string name="txt_term_condition_note">By clicking Sign Up, you agree to our <a href="https://drive.google.com/open?id=1kJBpGi7VLHo5-6m_Yq2mh6oH3T63xNF6">Term</a> and that you have read our policy.</string>
+    <string name="txt_refresh_prescription">Refresh prescription</string>
+    <string name="txt_prescription_updated">Prescription updated</string>
+    <string name="txt_prescription_updated_error">Prescription update error</string>
+    <string name="stats">Stats</string>
+    <string name="_1">1</string>
+    <string name="prescription">Prescription</string>
+    <string name="max_heart_rate_desc">Not to exceed [heart_rate] bpm</string>
+    <string name="prescription_reminder_notification_title">Exercise reminder.</string>
+    <string name="please_sync_data_notification_title">You haven\'t used the app in a while.</string>
+    <string name="congratulation_notification_title">Congratulation</string>
+    <string name="prescription_reminder_notification_body">Don\'t forget to exercise you still have an unfinished prescription.</string>
+    <string name="please_sync_data_notification_body">You haven\'t used the app in a while. Please login to sync your exercise data.</string>
+    <string name="congratulation_notification_body">You did it, Congratulation on completing your prescription.</string>
+    <string name="target_heart_rate">Target heart rate</string>
+    <string name="exercise_duration">Exercise duration</string>
+    <string name="weekly_exercise_sessions">Weekly exercise sessions</string>
+    <string name="weekly_exercise_prescription">Weekly exercise prescription</string>
+    <string name="maximum_heart_rate">Maximum heart rate</string>
+    <string name="suggested_exercise_duration">Suggested exercise duration</string>
+    <string name="warm_up">Warm Up</string>
+    <string name="exercise">Exercise</string>
+    <string name="cool_down">Cool Down</string>
+    <string name="your_exercise_achivement_today">Your exercise achivement today</string>
+    <string name="average_heart_rate">Average heart rate</string>
+    <string name="daily_step_goal">Daily target steps</string>
+    <string name="this_week_s_exercise">This week exercise</string>
+    <string name="sync_account_message">Please sync your account.</string>
+    <string name="sync_huami_button_txt">Please sync account</string>
+    <string name="difficulty">Difficulty</string>
+    <string name="enjoyment">Enjoyment</string>
+</resources>
