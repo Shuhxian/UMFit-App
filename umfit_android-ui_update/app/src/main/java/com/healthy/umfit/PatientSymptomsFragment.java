@@ -176,13 +176,15 @@ public class PatientSymptomsFragment extends Fragment {
                     ETRestEjection.setError("Field cannot be empty!");
                     return;
                 }
-                AndroidNetworking.get("https://flask-umfit.herokuapp.com/prescription/" + ETAge.getText().toString()
-                            + "," + ETPeakHR.getText().toString() + "," + ETMet.getText().toString() + "," + ETSt.getText().toString()
-                            + "," + ETRestEjection.getText().toString() + "," + SPAngina.getSelectedItem().toString() + ","
-                            + SPArrhythmias.getSelectedItem().toString() + "," + SPHemodynamics.getSelectedItem().toString() + ","
-                            + SPCardiacHistory.getSelectedItem().toString() + "," + SPDysrhythmias.getSelectedItem().toString() + ","
-                            + SPComplicatedMi.getSelectedItem().toString() + "," + SPChf.getSelectedItem().toString() + ","
-                            + SPIschemia.getSelectedItem().toString() + "," + SPClinicalDepression.getSelectedItem().toString())
+                String url="https://flask-umfit.herokuapp.com/prescription/" + commonUser.getEmail()+","+ETAge.getText().toString()+","+ETRestHR.getText().toString()
+                        + "," + ETPeakHR.getText().toString() + "," + ETMet.getText().toString() + "," + ETSt.getText().toString()
+                        + "," + ETRestEjection.getText().toString() + "," + SPAngina.getSelectedItem().toString() + ","
+                        + SPArrhythmias.getSelectedItem().toString() + "," + SPHemodynamics.getSelectedItem().toString() + ","
+                        + SPCardiacHistory.getSelectedItem().toString() + "," + SPDysrhythmias.getSelectedItem().toString() + ","
+                        + SPComplicatedMi.getSelectedItem().toString() + "," + SPChf.getSelectedItem().toString() + ","
+                        + SPIschemia.getSelectedItem().toString() + "," + SPClinicalDepression.getSelectedItem().toString();
+                Log.d("URL",url);
+                AndroidNetworking.get(url)
                             .setPriority(Priority.MEDIUM)
                             .build()
                             .getAsJSONObject(new JSONObjectRequestListener() {

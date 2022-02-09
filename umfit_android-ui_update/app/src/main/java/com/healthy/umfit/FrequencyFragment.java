@@ -35,6 +35,7 @@ import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.client.m
 import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.impl.client.DefaultHttpClient;
 import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.message.BasicNameValuePair;
 import com.healthy.umfit.entity.User;
+import com.healthy.umfit.entity.UserPrescription;
 import com.healthy.umfit.utils.SharedPreferencesManager;
 
 import org.json.JSONException;
@@ -55,9 +56,14 @@ public class FrequencyFragment extends Fragment {
     private SharedPreferencesManager sharedPrefObj;
 
     private User userObj;
+    private String frequency,duration,avgHR,maxHR;
 
-    public FrequencyFragment() {
+    public FrequencyFragment(String frequency, String duration, String avgHR, String maxHR) {
         // Required empty public constructor
+        this.frequency=frequency;
+        this.duration=duration;
+        this.avgHR=avgHR;
+        this.maxHR=maxHR;
     }
 
     @Override
@@ -75,6 +81,7 @@ public class FrequencyFragment extends Fragment {
         // Inflate the layout for this fragment
         final View rootView = inflater.inflate(R.layout.fragment_frequency, container, false);
         findViewById(rootView);
+        setData();
         final RadioGroup RGFreq=rootView.findViewById(R.id.RGFreq);
         RGFreq.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -82,13 +89,12 @@ public class FrequencyFragment extends Fragment {
                 RadioButton radioButton = rootView.findViewById(checkedId);
                 switch(checkedId) {
                     case R.id.RB5times:
-                        userPrescription.setTargetTotalExerciseDuration("30");
+                        commonUser.setTargetExerciseDuration("30");
                         commonUser.setTargetExerciseFrequency("5");
-                        editPageData();
+                        break;
                     case R.id.RB3times:
-                        userPrescription.setTargetTotalExerciseDuration("50");
-                        commonUser.setTargetExerciseDuration("3");
-                        editPageData();
+                        commonUser.setTargetExerciseDuration("50");
+                        commonUser.setTargetExerciseFrequency("3");
                         break;
                 }
 
@@ -98,14 +104,13 @@ public class FrequencyFragment extends Fragment {
         final Button btnUpdateFreq = rootView.findViewById(R.id.btnUpdateFreq);
         btnUpdateFreq.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Code here executes on main thread after user presses button
+                editPageData();
                 loadFragment(new StatsFragment());
             }
         });
         final Button btnUpdateFreqCancel = rootView.findViewById(R.id.btnUpdateFreqCancel);
         btnUpdateFreqCancel.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Code here executes on main thread after user presses button
                 loadFragment(new StatsFragment());
             }
         });
@@ -140,7 +145,7 @@ public class FrequencyFragment extends Fragment {
     }
 
     public void editPageData(){
-        JSONObject prescription = new JSONObject();
+        /*JSONObject prescription = new JSONObject();
         try {
             prescription.put("average_heart_rate",0);
             prescription.put("max_heart_rate",0);
@@ -176,12 +181,12 @@ public class FrequencyFragment extends Fragment {
             jsonObject.put("huami_token",null);
         } catch (JSONException e) {
             e.printStackTrace();
-        }
-
-                //
-        AndroidNetworking.put(hostUrl + KEY_UPDATE)
-                .addHeaders("Authorization", "Bearer " + userObj.getUserToken())
-                .addJSONObjectBody(jsonObject)
+        }*/
+        String url="https://flask-umfit.herokuapp.com/update/"+commonUser.getEmail()+","+
+                commonUser.getTargetHeartRate()+","+commonUser.getTargetMaxHeartRate()+","+
+                commonUser.getTargetExerciseDuration()+","+commonUser.getTargetExerciseFrequency();
+        Log.d("URL",url);
+        AndroidNetworking.get(url)
                 .setPriority(Priority.MEDIUM)
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {
@@ -219,5 +224,71 @@ public class FrequencyFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
+    }
+
+    private void setData() {
+
+        if(commonUser != null)
+        {
+            String url="https://flask-umfit.herokuapp.com/data/"+commonUser.getEmail()+",user";
+            Log.d("Test",url);
+            AndroidNetworking.get(url)
+                    .setPriority(Priority.MEDIUM)
+                    .build()
+                    .getAsJSONObject(new JSONObjectRequestListener() {
+                        @Override
+                        public void onResponse(JSONObject response) {
+                            Log.d(TAG, "api result: " + response.toString());
+                            //userObj.updateData(response);
+                            try {
+                                Log.d("Debug",Integer.toString(response.getJSONObject("frequency").getInt("0")));
+                                /*frequency =Integer.toString(response.getJSONObject("frequency").getInt("0"));
+                                avgHR=Integer.toString(response.getJSONObject("avgHR").getInt("0"));
+                                maxHR=Integer.toString(response.getJSONObject("maxHR").getInt("0"));
+                                duration=Integer.toString(response.getJSONObject("duration").getInt("0"));*/
+                                commonUser.setTargetExerciseFrequency(Integer.toString(response.getJSONObject("frequency").getInt("0")));
+                                commonUser.setTargetExerciseDuration(Integer.toString(response.getJSONObject("duration").getInt("0")));
+                                commonUser.setTargetHeartRate(Integer.toString(response.getJSONObject("targetHR").getInt("0")));
+                                commonUser.setTargetMaxHeartRate(Integer.toString(response.getJSONObject("maxHR").getInt("0")));
+                                }catch(Exception e){
+                                e.printStackTrace();
+                            }
+
+                        }
+                        @Override
+                        public void onError(ANError error) {
+                            if (error.getErrorCode() != 0) {
+                                Log.d(TAG, "onError errorCode : " + error.getErrorCode());
+                                Log.d(TAG, "onError errorBody : " + error.getErrorBody());
+                                Log.d(TAG, "onError errorDetail : " + error.getErrorDetail()+hostUrl + KEY_USER);
+                            } else {
+                                Log.d(TAG, "onError errorDetail : " + error.getErrorDetail()+hostUrl + KEY_USER);
+                            }
+                        }
+                    });
+
+            //tvExerciseSessions.setText(getResources().getString(R.string.txt_sessions_per_week).replace("[session_count]", String.valueOf(commonUser.getTargetExerciseFrequency())));
+            //tvTargetHeartRate.setText(getResources().getString(R.string.txt_heart_rate_bpm).replace("[heart_rate]", String.valueOf(commonUser.getTargetHeartRate())));
+//            tvStepsDesc.setText(getResources().getString(R.string.txt_daily_step_count_msg).replace("[step_count]", String.valueOf(commonUser.getActivityGoal())));
+            //tvMaximumHeartRate.setText(getResources().getString(R.string.txt_heart_rate_bpm).replace("[heart_rate]", String.valueOf(commonUser.getTargetMaxHeartRate())));
+        }
+//        tvMaximumHeartRateDesc.setText(getResources().getString(R.string.txt_maximum_heart_rate_msg).replace("[heart_rate]", String.valueOf(maximumHeartRate)));
+
+        if (userPrescription != null)
+        {
+            //tvExerciseDuration.setText(getResources().getString(R.string.txt_minute).replace("[minute]", String.valueOf(userPrescription.getTargetTotalExerciseDuration())));
+            //tvWarmUp.setText(getResources().getString(R.string.txt_targetWarmUpDuration).replace("[duration]", String.valueOf(userPrescription.getTargetWarmUpDuration())));
+            //tvFirstExercise.setText(getResources().getString(R.string.txt_targetFirstMainExerciseDuration).replace("[duration]", String.valueOf(userPrescription.getTargetFirstMainExerciseDuration())));
+            //tvFirstRest.setText(getResources().getString(R.string.txt_targetFirstRestDuration).replace("[duration]", String.valueOf(userPrescription.getTargetFirstRestDuration())));
+            //tvSecondExercise.setText(getResources().getString(R.string.txt_targetSecondMainExerciseDuration).replace("[duration]", String.valueOf(userPrescription.getTargetSecondMainExerciseDuration())));
+//            tvSecondRest.setText(getResources().getString(R.string.txt_targetSecondRestDuration).replace("[duration]", String.valueOf(userPrescription.getTargetSecondRestDuration())));
+            //tvCoolDown.setText(getResources().getString(R.string.txt_targetCooldownDuration).replace("[duration]", String.valueOf(userPrescription.getTargetCoolDownDuration())));
+//            tvTotalExercise.setText(getResources().getString(R.string.txt_targetTotalExerciseDuration).replace("[duration]", String.valueOf(userPrescription.getTargetTotalExerciseDuration())));
+        }
+        else
+        {
+            //tvExerciseDuration.setText(getResources().getString(R.string.txt_minute).replace("[minute]", String.valueOf(commonUser.getTargetExerciseDuration())));
+        }
+
     }
 }

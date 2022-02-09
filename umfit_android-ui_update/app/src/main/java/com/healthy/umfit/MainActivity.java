@@ -76,6 +76,31 @@ public class MainActivity extends AppCompatActivity implements
 
         if(sharedPrefObj.getPref(KEY_LOGIN) != null) {
             userObj = new User(sharedPrefObj.getPref(KEY_LOGIN));
+            try {
+                Log.d("Test", userObj.getUserToken());
+            }catch(Exception e){
+                Log.d("Test","UserToken");
+            }
+            try {
+                Log.d("Test", userObj.getUserId());
+            }catch(Exception e){
+                Log.d("Test","UserId");
+            }
+            try {
+                Log.d("Test", userObj.getEmail());
+            }catch(Exception e){
+                Log.d("Test","Email");
+            }
+            try {
+                Log.d("Test", userObj.getPhoneNumber());
+            }catch(Exception e){
+                Log.d("Test","Phone Number");
+            }
+            try {
+                Log.d("Test",userObj.getUserPrescription().toString());
+            }catch(Exception e){
+                Log.d("Test","Prescription");
+            }
             userPrescription = userObj.getUserPrescription();
         }
 

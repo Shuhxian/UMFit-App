@@ -1,7 +1,8 @@
 package com.healthy.umfit;
 
+import android.app.AlertDialog;
 import android.content.Context;
-import android.content.Intent;
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.AppCompatEditText;
@@ -37,9 +38,7 @@ import com.healthy.umfit.utils.SharedPreferencesManager;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
 
 import static com.healthy.umfit.TagName.*;
 import static com.healthy.umfit.utils.CommonUtilities.*;
@@ -54,7 +53,7 @@ public class StatsFragment extends Fragment{
     private ArrayList<Activity> workoutList = new ArrayList<>();
     private TextView tvExerciseSessions, tvTargetHeartRate, tvMaximumHeartRate, tvExerciseDuration, tvExerciseLastUpdated, tvSteps, tvWorkoutLastUpdated;
     private TextView tvExerciseSessionsDesc, tvTargetHeartRateDesc, tvMaximumHeartRateDesc, tvExerciseDurationDesc, tvStepsDesc;
-    private Spinner SPNumExercise, SPEx1, SPEx2, SPEx3, SPEx4;
+    private Spinner SPNumExercise, SPEx5, SPEx2, SPEx3, SPEx4;
     private AppCompatEditText edtInputDate;
     //    private LinearLayout llWorkout;
     private ProgressBar pbStatus;
@@ -79,6 +78,7 @@ public class StatsFragment extends Fragment{
     private TextView tvWarmUp, tvFirstExercise, tvFirstRest, tvSecondExercise, tvSecondRest, tvCoolDown, tvTotalExercise, TVCd;
     private LinearLayout LLStats1,LLStats2,LLStats3,LLStats4,LLStats5,LLStats6;
     private int numExercise;
+    private String frequency="5",avgHR="100",maxHR="140",duration="30";
     public StatsFragment() {
         // Required empty public constructor
         this.numExercise=3;
@@ -109,38 +109,61 @@ public class StatsFragment extends Fragment{
         btnEditFreq.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Code here executes on main thread after user presses button
-                loadFragment(new FrequencyFragment());
+                loadFragment(new FrequencyFragment(frequency,duration,avgHR,maxHR));
             }
         });
         final Button btnEditTime = rootView.findViewById(R.id.btnChangeTime);
         btnEditTime.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Code here executes on main thread after user presses button
-                loadFragment(new FrequencyFragment());
+                loadFragment(new FrequencyFragment(frequency,duration,avgHR,maxHR));
             }
         });
         final Button btnSubmitFeedback = rootView.findViewById(R.id.btnSubmitFeedback);
         btnSubmitFeedback.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Code here executes on main thread after user presses button
-                loadFragment(new ReviewFragment());
+                String ex2=SPEx2.getSelectedItem().toString();
+                String ex3=SPEx3.getSelectedItem().toString();
+                String ex4=SPEx4.getSelectedItem().toString();
+                String ex5=SPEx5.getSelectedItem().toString();
+                loadFragment(new ReviewFragment(ex2,ex3,ex4,ex5, numExercise));
             }
         });
         final Button btnPrescribeMain = rootView.findViewById(R.id.btnPrescribeMain);
         btnPrescribeMain.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Code here executes on main thread after user presses button
-                loadFragment(new PatientSymptomsFragment());
+                AlertDialog.Builder builder1 = new AlertDialog.Builder(getActivity());
+                builder1.setMessage("Please make sure you have your doctor's permission before using this function.");
+                builder1.setCancelable(true);
+
+                builder1.setPositiveButton(
+                        "Proceed",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                loadFragment(new PatientSymptomsFragment());
+                            }
+                        });
+
+                builder1.setNegativeButton(
+                        "Cancel",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+                AlertDialog alert11 = builder1.create();
+                alert11.show();
             }
         });
-        srlStatus.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+        /*srlStatus.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
                 if (isAdded()) {
                     updatePageData();
                 }
             }
-        });
+        });*/
         final String numExerciseSelection[]={"3","4","5","6"};
         ArrayAdapter adapter = new ArrayAdapter(getActivity(),android.R.layout.simple_spinner_item,numExerciseSelection);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -164,7 +187,9 @@ public class StatsFragment extends Fragment{
             LLStats3.setVisibility(View.GONE);
         }
         TVCd.setText(Integer.toString(this.numExercise));
-        AndroidNetworking.get("https://flask-umfit.herokuapp.com/preference/"+KEY_PREF_USER)
+        String url="https://flask-umfit.herokuapp.com/preference/"+commonUser.getEmail();
+        Log.d("Test",url);
+        AndroidNetworking.get(url)
                 .setPriority(Priority.MEDIUM)
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {
@@ -182,15 +207,6 @@ public class StatsFragment extends Fragment{
                                 // Specify the layout to use when the list of choices appears
                                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                                 // Apply the adapter to the spinner
-                                SPEx1.setAdapter(adapter);
-                                SPEx1.setOnItemSelectedListener(
-                                        new AdapterView.OnItemSelectedListener() {
-                                            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-
-                                            }
-                                            public void onNothingSelected(AdapterView<?> parent) {
-                                            }
-                                        });
                                 SPEx2.setAdapter(adapter);
                                 SPEx2.setOnItemSelectedListener(
                                         new AdapterView.OnItemSelectedListener() {
@@ -211,6 +227,15 @@ public class StatsFragment extends Fragment{
                                         });
                                 SPEx4.setAdapter(adapter);
                                 SPEx4.setOnItemSelectedListener(
+                                        new AdapterView.OnItemSelectedListener() {
+                                            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+
+                                            }
+                                            public void onNothingSelected(AdapterView<?> parent) {
+                                            }
+                                        });
+                                SPEx5.setAdapter(adapter);
+                                SPEx5.setOnItemSelectedListener(
                                         new AdapterView.OnItemSelectedListener() {
                                             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
 
@@ -280,10 +305,10 @@ public class StatsFragment extends Fragment{
         LLStats5=rootView.findViewById(R.id.LLStats5);
         LLStats6=rootView.findViewById(R.id.LLStats6);
 
-        SPEx1=rootView.findViewById(R.id.SPEx1);
         SPEx2=rootView.findViewById(R.id.SPEx2);
         SPEx3=rootView.findViewById(R.id.SPEx3);
         SPEx4=rootView.findViewById(R.id.SPEx4);
+        SPEx5=rootView.findViewById(R.id.SPEx5);
         SPNumExercise=rootView.findViewById(R.id.SPNumExercise);
 
         TVCd=rootView.findViewById(R.id.TVCd);
@@ -304,10 +329,51 @@ public class StatsFragment extends Fragment{
 
         if(commonUser != null)
         {
-            tvExerciseSessions.setText(getResources().getString(R.string.txt_sessions_per_week).replace("[session_count]", String.valueOf(commonUser.getTargetExerciseFrequency())));
-            tvTargetHeartRate.setText(getResources().getString(R.string.txt_heart_rate_bpm).replace("[heart_rate]", String.valueOf(commonUser.getTargetHeartRate())));
+            String url="https://flask-umfit.herokuapp.com/data/"+commonUser.getEmail()+",user";
+            Log.d("Test",url);
+            AndroidNetworking.get(url)
+                    .setPriority(Priority.MEDIUM)
+                    .build()
+                    .getAsJSONObject(new JSONObjectRequestListener() {
+                        @Override
+                        public void onResponse(JSONObject response) {
+                            Log.d(TAG, "api result: " + response.toString());
+                            //userObj.updateData(response);
+                            try {
+                                Log.d("Debug",Integer.toString(response.getJSONObject("frequency").getInt("0")));
+                                /*frequency =Integer.toString(response.getJSONObject("frequency").getInt("0"));
+                                avgHR=Integer.toString(response.getJSONObject("avgHR").getInt("0"));
+                                maxHR=Integer.toString(response.getJSONObject("maxHR").getInt("0"));
+                                duration=Integer.toString(response.getJSONObject("duration").getInt("0"));*/
+                                commonUser.setTargetExerciseFrequency(Integer.toString(response.getJSONObject("frequency").getInt("0")));
+                                commonUser.setTargetExerciseDuration(Integer.toString(response.getJSONObject("duration").getInt("0")));
+                                commonUser.setTargetHeartRate(Integer.toString(response.getJSONObject("targetHR").getInt("0")));
+                                commonUser.setTargetMaxHeartRate(Integer.toString(response.getJSONObject("maxHR").getInt("0")));
+                                tvExerciseSessions.setText(getResources().getString(R.string.txt_sessions_per_week).replace("[session_count]", commonUser.getTargetExerciseFrequency()));
+                                tvTargetHeartRate.setText(getResources().getString(R.string.txt_heart_rate_bpm).replace("[heart_rate]", commonUser.getTargetHeartRate()));
+                                tvMaximumHeartRate.setText(getResources().getString(R.string.txt_heart_rate_bpm).replace("[heart_rate]", commonUser.getTargetMaxHeartRate()));
+                                tvExerciseDuration.setText(getResources().getString(R.string.txt_minute).replace("[minute]", commonUser.getTargetExerciseDuration()));
+                            }catch(Exception e){
+                                e.printStackTrace();
+                            }
+
+                        }
+                        @Override
+                        public void onError(ANError error) {
+                            if (error.getErrorCode() != 0) {
+                                Log.d(TAG, "onError errorCode : " + error.getErrorCode());
+                                Log.d(TAG, "onError errorBody : " + error.getErrorBody());
+                                Log.d(TAG, "onError errorDetail : " + error.getErrorDetail()+hostUrl + KEY_USER);
+                            } else {
+                                Log.d(TAG, "onError errorDetail : " + error.getErrorDetail()+hostUrl + KEY_USER);
+                            }
+                        }
+                    });
+
+            //tvExerciseSessions.setText(getResources().getString(R.string.txt_sessions_per_week).replace("[session_count]", String.valueOf(commonUser.getTargetExerciseFrequency())));
+            //tvTargetHeartRate.setText(getResources().getString(R.string.txt_heart_rate_bpm).replace("[heart_rate]", String.valueOf(commonUser.getTargetHeartRate())));
 //            tvStepsDesc.setText(getResources().getString(R.string.txt_daily_step_count_msg).replace("[step_count]", String.valueOf(commonUser.getActivityGoal())));
-            tvMaximumHeartRate.setText(getResources().getString(R.string.txt_heart_rate_bpm).replace("[heart_rate]", String.valueOf(commonUser.getTargetMaxHeartRate())));
+            //tvMaximumHeartRate.setText(getResources().getString(R.string.txt_heart_rate_bpm).replace("[heart_rate]", String.valueOf(commonUser.getTargetMaxHeartRate())));
         }
 //        tvMaximumHeartRateDesc.setText(getResources().getString(R.string.txt_maximum_heart_rate_msg).replace("[heart_rate]", String.valueOf(maximumHeartRate)));
 
@@ -324,7 +390,7 @@ public class StatsFragment extends Fragment{
         }
         else
         {
-            tvExerciseDuration.setText(getResources().getString(R.string.txt_minute).replace("[minute]", String.valueOf(commonUser.getTargetExerciseDuration())));
+            //tvExerciseDuration.setText(getResources().getString(R.string.txt_minute).replace("[minute]", String.valueOf(commonUser.getTargetExerciseDuration())));
         }
 
     }

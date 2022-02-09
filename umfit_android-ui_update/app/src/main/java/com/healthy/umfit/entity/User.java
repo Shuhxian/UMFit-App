@@ -56,7 +56,7 @@ public class User implements Serializable {
             }
 
             if (userObj.has("email")) {
-                phoneNumber = userObj.getString("email");
+                email = userObj.getString("email");
             }
 
             if (userObj.has("token")) {

@@ -470,7 +470,7 @@
                                 android:paddingLeft="13dp">
 
                                 <Spinner
-                                    android:id="@+id/SPEx1"
+                                    android:id="@+id/SPEx2"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1" />
@@ -509,7 +509,7 @@
                                 android:paddingLeft="13dp">
 
                                 <Spinner
-                                    android:id="@+id/SPEx2"
+                                    android:id="@+id/SPEx3"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1" />
@@ -548,7 +548,7 @@
                                 android:paddingLeft="13dp">
 
                                 <Spinner
-                                    android:id="@+id/SPEx3"
+                                    android:id="@+id/SPEx4"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1" />
@@ -587,7 +587,7 @@
                                 android:paddingLeft="13dp">
 
                                 <Spinner
-                                    android:id="@+id/SPEx4"
+                                    android:id="@+id/SPEx5"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1" />
@@ -639,29 +639,28 @@
 
                 </RelativeLayout>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <Button
                         android:id="@+id/btnPrescribeMain"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="24dp"
-                        android:text="Prescribe Exercise"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="Prescribe Exercise" />
 
                     <Button
                         android:id="@+id/btnSubmitFeedback"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="24dp"
-                        android:text="Submit Feedback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent" />
+                        android:layout_marginLeft="130dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="Submit Feedback" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
 
                 <ScrollView
                     android:layout_width="match_parent"
