@@ -1,0 +1,413 @@
+userId,type,rating
+0,Aerobics (senaman aerobik),1.0
+0,Brisk Walking (berjalan pantas),3.0
+0,Circuit Training,5.0
+0,Cycle Ergometer (berbasikal),3.0
+0,Cycling (berbasikal),2.0
+0,Dancing (menari),5.0
+0,Elliptical (menaiki mesin eliptikal),1.0
+0,Hiking (merentas hutan),5.0
+0,Jogging Outdoors (berlari di luar),4.0
+0,Jogging on Treadmill (berlari),1.0
+0,Jump Rope (lompat tali),1.0
+0,Lower Body Resistance Exercise (latihan bebanan anggota bawah),4.0
+0,Recumbent cycle Ergometer (mengayuh basikal duduk),3.0
+0,Rower (menggunakan mesin rower),1.0
+0,Stair Climbing (latihan memanjat tangga),1.0
+0,Swimming (berenang),5.0
+0,Tai Chi,1.0
+0,Upper Body Resistance Exercise (latihan bebanan anggota atas),4.0
+0,Walking Outdoors (berjalan diluar),5.0
+0,Walking on Treadmill (berjalan),3.0
+1,Aerobics (senaman aerobik),2.0
+1,Brisk Walking (berjalan pantas),4.0
+1,Circuit Training,2.0
+1,Cycle Ergometer (berbasikal),2.0
+1,Cycling (berbasikal),2.0
+1,Dancing (menari),2.0
+1,Elliptical (menaiki mesin eliptikal),2.0
+1,Hiking (merentas hutan),4.0
+1,Jogging Outdoors (berlari di luar),4.0
+1,Jogging on Treadmill (berlari),4.0
+1,Jump Rope (lompat tali),2.0
+1,Lower Body Resistance Exercise (latihan bebanan anggota bawah),2.0
+1,Recumbent cycle Ergometer (mengayuh basikal duduk),2.0
+1,Rower (menggunakan mesin rower),2.0
+1,Stair Climbing (latihan memanjat tangga),4.0
+1,Swimming (berenang),3.0
+1,Tai Chi,4.0
+1,Upper Body Resistance Exercise (latihan bebanan anggota atas),2.0
+1,Walking Outdoors (berjalan diluar),4.0
+1,Walking on Treadmill (berjalan),3.0
+2,Aerobics (senaman aerobik),5.0
+2,Brisk Walking (berjalan pantas),5.0
+2,Circuit Training,5.0
+2,Cycle Ergometer (berbasikal),3.0
+2,Cycling (berbasikal),1.0
+2,Dancing (menari),4.0
+2,Elliptical (menaiki mesin eliptikal),3.0
+2,Hiking (merentas hutan),3.0
+2,Jogging Outdoors (berlari di luar),3.0
+2,Jogging on Treadmill (berlari),3.0
+2,Jump Rope (lompat tali),3.0
+2,Lower Body Resistance Exercise (latihan bebanan anggota bawah),3.0
+2,Recumbent cycle Ergometer (mengayuh basikal duduk),3.0
+2,Rower (menggunakan mesin rower),1.0
+2,Stair Climbing (latihan memanjat tangga),3.0
+2,Swimming (berenang),1.0
+2,Tai Chi,3.0
+2,Upper Body Resistance Exercise (latihan bebanan anggota atas),1.0
+2,Walking Outdoors (berjalan diluar),4.0
+2,Walking on Treadmill (berjalan),3.0
+3,Aerobics (senaman aerobik),1.0
+3,Brisk Walking (berjalan pantas),5.0
+3,Circuit Training,2.0
+3,Cycle Ergometer (berbasikal),3.0
+3,Cycling (berbasikal),4.0
+3,Dancing (menari),5.0
+3,Elliptical (menaiki mesin eliptikal),3.0
+3,Hiking (merentas hutan),4.0
+3,Jogging Outdoors (berlari di luar),2.0
+3,Jogging on Treadmill (berlari),3.0
+3,Jump Rope (lompat tali),1.0
+3,Lower Body Resistance Exercise (latihan bebanan anggota bawah),1.0
+3,Recumbent cycle Ergometer (mengayuh basikal duduk),3.0
+3,Rower (menggunakan mesin rower),1.0
+3,Stair Climbing (latihan memanjat tangga),1.0
+3,Swimming (berenang),4.0
+3,Tai Chi,2.0
+3,Upper Body Resistance Exercise (latihan bebanan anggota atas),1.0
+3,Walking Outdoors (berjalan diluar),5.0
+3,Walking on Treadmill (berjalan),5.0
+4,Aerobics (senaman aerobik),4.0
+4,Brisk Walking (berjalan pantas),5.0
+4,Circuit Training,3.0
+4,Cycle Ergometer (berbasikal),4.0
+4,Cycling (berbasikal),4.0
+4,Dancing (menari),4.0
+4,Elliptical (menaiki mesin eliptikal),4.0
+4,Hiking (merentas hutan),4.0
+4,Jogging Outdoors (berlari di luar),4.0
+4,Jogging on Treadmill (berlari),3.0
+4,Jump Rope (lompat tali),3.0
+4,Lower Body Resistance Exercise (latihan bebanan anggota bawah),3.0
+4,Recumbent cycle Ergometer (mengayuh basikal duduk),4.0
+4,Rower (menggunakan mesin rower),3.0
+4,Stair Climbing (latihan memanjat tangga),4.0
+4,Swimming (berenang),4.0
+4,Tai Chi,5.0
+4,Upper Body Resistance Exercise (latihan bebanan anggota atas),4.0
+4,Walking Outdoors (berjalan diluar),5.0
+4,Walking on Treadmill (berjalan),3.0
+5,Aerobics (senaman aerobik),3.0
+5,Brisk Walking (berjalan pantas),5.0
+5,Circuit Training,4.0
+5,Cycle Ergometer (berbasikal),4.0
+5,Cycling (berbasikal),2.0
+5,Dancing (menari),4.0
+5,Elliptical (menaiki mesin eliptikal),3.0
+5,Hiking (merentas hutan),5.0
+5,Jogging Outdoors (berlari di luar),4.0
+5,Jogging on Treadmill (berlari),4.0
+5,Jump Rope (lompat tali),1.0
+5,Lower Body Resistance Exercise (latihan bebanan anggota bawah),3.0
+5,Recumbent cycle Ergometer (mengayuh basikal duduk),3.0
+5,Rower (menggunakan mesin rower),3.0
+5,Stair Climbing (latihan memanjat tangga),2.0
+5,Swimming (berenang),4.0
+5,Tai Chi,2.0
+5,Upper Body Resistance Exercise (latihan bebanan anggota atas),2.0
+5,Walking Outdoors (berjalan diluar),5.0
+5,Walking on Treadmill (berjalan),4.0
+6,Aerobics (senaman aerobik),3.0
+6,Brisk Walking (berjalan pantas),4.0
+6,Circuit Training,4.0
+6,Cycle Ergometer (berbasikal),4.0
+6,Cycling (berbasikal),3.0
+6,Dancing (menari),3.0
+6,Elliptical (menaiki mesin eliptikal),3.0
+6,Hiking (merentas hutan),4.0
+6,Jogging Outdoors (berlari di luar),4.0
+6,Jogging on Treadmill (berlari),4.0
+6,Jump Rope (lompat tali),3.0
+6,Lower Body Resistance Exercise (latihan bebanan anggota bawah),3.0
+6,Recumbent cycle Ergometer (mengayuh basikal duduk),4.0
+6,Rower (menggunakan mesin rower),3.0
+6,Stair Climbing (latihan memanjat tangga),3.0
+6,Swimming (berenang),3.0
+6,Tai Chi,3.0
+6,Upper Body Resistance Exercise (latihan bebanan anggota atas),3.0
+6,Walking Outdoors (berjalan diluar),5.0
+6,Walking on Treadmill (berjalan),5.0
+7,Brisk Walking (berjalan pantas),3.0
+7,Hiking (merentas hutan),3.0
+7,Jogging on Treadmill (berlari),1.0
+7,Stair Climbing (latihan memanjat tangga),1.0
+7,Swimming (berenang),2.0
+7,Walking Outdoors (berjalan diluar),3.0
+7,Walking on Treadmill (berjalan),1.0
+8,Brisk Walking (berjalan pantas),4.0
+8,Cycle Ergometer (berbasikal),1.0
+8,Cycling (berbasikal),4.0
+8,Hiking (merentas hutan),4.0
+8,Jogging Outdoors (berlari di luar),2.0
+8,Jogging on Treadmill (berlari),3.0
+8,Walking Outdoors (berjalan diluar),5.0
+8,Walking on Treadmill (berjalan),4.0
+9,Aerobics (senaman aerobik),1.0
+9,Brisk Walking (berjalan pantas),5.0
+9,Circuit Training,5.0
+9,Cycle Ergometer (berbasikal),4.0
+9,Cycling (berbasikal),1.0
+9,Dancing (menari),3.0
+9,Elliptical (menaiki mesin eliptikal),4.0
+9,Hiking (merentas hutan),1.0
+9,Jogging Outdoors (berlari di luar),1.0
+9,Jogging on Treadmill (berlari),1.0
+9,Jump Rope (lompat tali),1.0
+9,Lower Body Resistance Exercise (latihan bebanan anggota bawah),1.0
+9,Recumbent cycle Ergometer (mengayuh basikal duduk),4.0
+9,Rower (menggunakan mesin rower),4.0
+9,Stair Climbing (latihan memanjat tangga),1.0
+9,Swimming (berenang),1.0
+9,Tai Chi,5.0
+9,Upper Body Resistance Exercise (latihan bebanan anggota atas),1.0
+9,Walking Outdoors (berjalan diluar),5.0
+9,Walking on Treadmill (berjalan),1.0
+10,Brisk Walking (berjalan pantas),5.0
+10,Circuit Training,3.0
+10,Cycle Ergometer (berbasikal),1.0
+10,Jogging Outdoors (berlari di luar),2.0
+10,Jogging on Treadmill (berlari),1.0
+10,Stair Climbing (latihan memanjat tangga),4.0
+10,Swimming (berenang),2.0
+10,Walking Outdoors (berjalan diluar),5.0
+10,Walking on Treadmill (berjalan),1.0
+11,Aerobics (senaman aerobik),2.0
+11,Brisk Walking (berjalan pantas),3.0
+11,Circuit Training,2.0
+11,Cycling (berbasikal),2.0
+11,Elliptical (menaiki mesin eliptikal),2.0
+11,Hiking (merentas hutan),2.0
+11,Jogging Outdoors (berlari di luar),2.0
+11,Jogging on Treadmill (berlari),2.0
+11,Jump Rope (lompat tali),2.0
+11,Recumbent cycle Ergometer (mengayuh basikal duduk),4.0
+11,Stair Climbing (latihan memanjat tangga),2.0
+11,Walking Outdoors (berjalan diluar),5.0
+11,Walking on Treadmill (berjalan),3.0
+12,Aerobics (senaman aerobik),3.0
+12,Brisk Walking (berjalan pantas),4.0
+12,Circuit Training,2.0
+12,Cycle Ergometer (berbasikal),4.0
+12,Cycling (berbasikal),3.0
+12,Dancing (menari),3.0
+12,Elliptical (menaiki mesin eliptikal),3.0
+12,Hiking (merentas hutan),3.0
+12,Jogging Outdoors (berlari di luar),3.0
+12,Jogging on Treadmill (berlari),2.0
+12,Jump Rope (lompat tali),2.0
+12,Lower Body Resistance Exercise (latihan bebanan anggota bawah),2.0
+12,Recumbent cycle Ergometer (mengayuh basikal duduk),3.0
+12,Rower (menggunakan mesin rower),1.0
+12,Stair Climbing (latihan memanjat tangga),2.0
+12,Swimming (berenang),2.0
+12,Tai Chi,3.0
+12,Upper Body Resistance Exercise (latihan bebanan anggota atas),1.0
+12,Walking Outdoors (berjalan diluar),4.0
+12,Walking on Treadmill (berjalan),3.0
+13,Aerobics (senaman aerobik),2.0
+13,Brisk Walking (berjalan pantas),4.0
+13,Circuit Training,2.0
+13,Cycle Ergometer (berbasikal),4.0
+13,Cycling (berbasikal),5.0
+13,Dancing (menari),1.0
+13,Elliptical (menaiki mesin eliptikal),4.0
+13,Hiking (merentas hutan),3.0
+13,Jogging Outdoors (berlari di luar),3.0
+13,Jogging on Treadmill (berlari),3.0
+13,Jump Rope (lompat tali),2.0
+13,Lower Body Resistance Exercise (latihan bebanan anggota bawah),2.0
+13,Recumbent cycle Ergometer (mengayuh basikal duduk),4.0
+13,Rower (menggunakan mesin rower),3.0
+13,Stair Climbing (latihan memanjat tangga),1.0
+13,Swimming (berenang),5.0
+13,Tai Chi,2.0
+13,Upper Body Resistance Exercise (latihan bebanan anggota atas),2.0
+13,Walking Outdoors (berjalan diluar),4.0
+13,Walking on Treadmill (berjalan),3.0
+14,Aerobics (senaman aerobik),1.0
+14,Brisk Walking (berjalan pantas),4.0
+14,Circuit Training,3.0
+14,Cycle Ergometer (berbasikal),1.0
+14,Cycling (berbasikal),1.0
+14,Dancing (menari),5.0
+14,Elliptical (menaiki mesin eliptikal),1.0
+14,Hiking (merentas hutan),5.0
+14,Jogging Outdoors (berlari di luar),3.0
+14,Jogging on Treadmill (berlari),1.0
+14,Jump Rope (lompat tali),3.0
+14,Lower Body Resistance Exercise (latihan bebanan anggota bawah),3.0
+14,Recumbent cycle Ergometer (mengayuh basikal duduk),1.0
+14,Rower (menggunakan mesin rower),1.0
+14,Stair Climbing (latihan memanjat tangga),1.0
+14,Swimming (berenang),1.0
+14,Tai Chi,1.0
+14,Upper Body Resistance Exercise (latihan bebanan anggota atas),1.0
+14,Walking Outdoors (berjalan diluar),5.0
+14,Walking on Treadmill (berjalan),1.0
+15,Aerobics (senaman aerobik),1.0
+15,Brisk Walking (berjalan pantas),1.0
+15,Circuit Training,1.0
+15,Cycle Ergometer (berbasikal),1.0
+15,Cycling (berbasikal),1.0
+15,Dancing (menari),1.0
+15,Elliptical (menaiki mesin eliptikal),1.0
+15,Hiking (merentas hutan),2.0
+15,Jogging Outdoors (berlari di luar),1.0
+15,Jogging on Treadmill (berlari),1.0
+15,Jump Rope (lompat tali),1.0
+15,Lower Body Resistance Exercise (latihan bebanan anggota bawah),1.0
+15,Recumbent cycle Ergometer (mengayuh basikal duduk),1.0
+15,Rower (menggunakan mesin rower),1.0
+15,Stair Climbing (latihan memanjat tangga),1.0
+15,Swimming (berenang),1.0
+15,Tai Chi,1.0
+15,Upper Body Resistance Exercise (latihan bebanan anggota atas),1.0
+15,Walking Outdoors (berjalan diluar),1.0
+15,Walking on Treadmill (berjalan),2.0
+16,Aerobics (senaman aerobik),5.0
+16,Brisk Walking (berjalan pantas),5.0
+16,Circuit Training,5.0
+16,Cycle Ergometer (berbasikal),3.0
+16,Cycling (berbasikal),4.0
+16,Dancing (menari),5.0
+16,Elliptical (menaiki mesin eliptikal),3.0
+16,Hiking (merentas hutan),4.0
+16,Jogging Outdoors (berlari di luar),4.0
+16,Jogging on Treadmill (berlari),3.0
+16,Jump Rope (lompat tali),4.0
+16,Lower Body Resistance Exercise (latihan bebanan anggota bawah),2.0
+16,Recumbent cycle Ergometer (mengayuh basikal duduk),3.0
+16,Rower (menggunakan mesin rower),3.0
+16,Stair Climbing (latihan memanjat tangga),2.0
+16,Swimming (berenang),3.0
+16,Tai Chi,5.0
+16,Upper Body Resistance Exercise (latihan bebanan anggota atas),3.0
+16,Walking Outdoors (berjalan diluar),5.0
+16,Walking on Treadmill (berjalan),3.0
+17,Aerobics (senaman aerobik),5.0
+17,Brisk Walking (berjalan pantas),4.0
+17,Circuit Training,5.0
+17,Cycle Ergometer (berbasikal),3.0
+17,Cycling (berbasikal),1.0
+17,Dancing (menari),3.0
+17,Elliptical (menaiki mesin eliptikal),3.0
+17,Hiking (merentas hutan),3.0
+17,Jogging Outdoors (berlari di luar),5.0
+17,Jogging on Treadmill (berlari),3.0
+17,Jump Rope (lompat tali),4.0
+17,Lower Body Resistance Exercise (latihan bebanan anggota bawah),2.0
+17,Recumbent cycle Ergometer (mengayuh basikal duduk),3.0
+17,Rower (menggunakan mesin rower),3.0
+17,Stair Climbing (latihan memanjat tangga),4.0
+17,Swimming (berenang),1.0
+17,Tai Chi,3.0
+17,Upper Body Resistance Exercise (latihan bebanan anggota atas),2.0
+17,Walking Outdoors (berjalan diluar),5.0
+17,Walking on Treadmill (berjalan),4.0
+18,Aerobics (senaman aerobik),2.0
+18,Brisk Walking (berjalan pantas),5.0
+18,Circuit Training,1.0
+18,Cycle Ergometer (berbasikal),3.0
+18,Cycling (berbasikal),4.0
+18,Dancing (menari),3.0
+18,Elliptical (menaiki mesin eliptikal),3.0
+18,Hiking (merentas hutan),4.0
+18,Jogging Outdoors (berlari di luar),1.0
+18,Jogging on Treadmill (berlari),3.0
+18,Jump Rope (lompat tali),1.0
+18,Lower Body Resistance Exercise (latihan bebanan anggota bawah),1.0
+18,Recumbent cycle Ergometer (mengayuh basikal duduk),3.0
+18,Rower (menggunakan mesin rower),1.0
+18,Stair Climbing (latihan memanjat tangga),1.0
+18,Swimming (berenang),3.0
+18,Tai Chi,5.0
+18,Upper Body Resistance Exercise (latihan bebanan anggota atas),1.0
+18,Walking Outdoors (berjalan diluar),5.0
+18,Walking on Treadmill (berjalan),3.0
+19,Brisk Walking (berjalan pantas),4.0
+19,Cycling (berbasikal),3.0
+19,Hiking (merentas hutan),4.0
+19,Jogging Outdoors (berlari di luar),5.0
+19,Jogging on Treadmill (berlari),4.0
+19,Swimming (berenang),3.0
+19,Walking Outdoors (berjalan diluar),4.0
+19,Walking on Treadmill (berjalan),3.0
+20,Aerobics (senaman aerobik),5.0
+20,Brisk Walking (berjalan pantas),5.0
+20,Circuit Training,1.0
+20,Cycle Ergometer (berbasikal),3.0
+20,Cycling (berbasikal),3.0
+20,Dancing (menari),5.0
+20,Elliptical (menaiki mesin eliptikal),3.0
+20,Hiking (merentas hutan),5.0
+20,Jogging Outdoors (berlari di luar),4.0
+20,Jogging on Treadmill (berlari),3.0
+20,Jump Rope (lompat tali),3.0
+20,Lower Body Resistance Exercise (latihan bebanan anggota bawah),1.0
+20,Recumbent cycle Ergometer (mengayuh basikal duduk),3.0
+20,Rower (menggunakan mesin rower),1.0
+20,Stair Climbing (latihan memanjat tangga),3.0
+20,Swimming (berenang),3.0
+20,Tai Chi,4.0
+20,Upper Body Resistance Exercise (latihan bebanan anggota atas),1.0
+20,Walking Outdoors (berjalan diluar),5.0
+20,Walking on Treadmill (berjalan),3.0
+21,Aerobics (senaman aerobik),1.0
+21,Brisk Walking (berjalan pantas),2.0
+21,Circuit Training,1.0
+21,Cycle Ergometer (berbasikal),1.0
+21,Cycling (berbasikal),1.0
+21,Dancing (menari),1.0
+21,Elliptical (menaiki mesin eliptikal),2.0
+21,Hiking (merentas hutan),1.0
+21,Jogging Outdoors (berlari di luar),1.0
+21,Jogging on Treadmill (berlari),2.0
+21,Jump Rope (lompat tali),1.0
+21,Lower Body Resistance Exercise (latihan bebanan anggota bawah),2.0
+21,Recumbent cycle Ergometer (mengayuh basikal duduk),1.0
+21,Rower (menggunakan mesin rower),3.0
+21,Stair Climbing (latihan memanjat tangga),1.0
+21,Swimming (berenang),4.0
+21,Tai Chi,1.0
+21,Upper Body Resistance Exercise (latihan bebanan anggota atas),4.0
+21,Walking Outdoors (berjalan diluar),4.0
+21,Walking on Treadmill (berjalan),3.0
+22,Aerobics (senaman aerobik),5.0
+22,Cycling (berbasikal),1.0
+22,Dancing (menari),5.0
+22,Elliptical (menaiki mesin eliptikal),3.0
+22,Hiking (merentas hutan),4.0
+22,Jogging Outdoors (berlari di luar),1.0
+22,Swimming (berenang),4.0
+22,Walking Outdoors (berjalan diluar),5.0
+23,Aerobics (senaman aerobik),4.0
+23,Brisk Walking (berjalan pantas),3.0
+23,Circuit Training,4.0
+23,Cycle Ergometer (berbasikal),3.0
+23,Cycling (berbasikal),1.0
+23,Dancing (menari),4.0
+23,Elliptical (menaiki mesin eliptikal),2.0
+23,Hiking (merentas hutan),3.0
+23,Jogging Outdoors (berlari di luar),1.0
+23,Jogging on Treadmill (berlari),1.0
+23,Jump Rope (lompat tali),1.0
+23,Recumbent cycle Ergometer (mengayuh basikal duduk),4.0
+23,Rower (menggunakan mesin rower),1.0
+23,Stair Climbing (latihan memanjat tangga),2.0
+23,Swimming (berenang),1.0
+23,Tai Chi,4.0
+23,Upper Body Resistance Exercise (latihan bebanan anggota atas),1.0
+23,Walking Outdoors (berjalan diluar),5.0
+23,Walking on Treadmill (berjalan),5.0
